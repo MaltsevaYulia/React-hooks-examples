@@ -1,16 +1,18 @@
+import { AlertContext } from './TestContextHooh/AlertContext';
+import { Alert } from './TestContextHooh/Alert';
+import { Maine } from './TestContextHooh/Maine';
+import { SkipMountExample } from './SkipMountExample/SkipMountExample';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <AlertContext>
+        <div>
+          <Maine />
+          <Alert />
+        </div>
+      </AlertContext>
+      <SkipMountExample />
+    </>
   );
 };
